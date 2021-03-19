@@ -1,0 +1,119 @@
+@import "reset";
+@import "_variables";
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&family=Russo+One&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-y: scroll;
+  img {
+    width: 100%;
+    max-width: 800px;
+  }
+}
+.header {
+  background-color: #f0f0f0;
+  padding: 3em;
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $red;
+  .title {
+    font-size: 44px;
+    font-family: "Russo One", sans-serif;
+    margin-top: 10%;
+    margin-bottom: 38px;
+    span {
+      display: block;
+    }
+  }
+  .description {
+    &--title {
+      margin: 20px 0px;
+      font-size: 1.1em;
+      line-height: 1.2;
+    }
+    &--detail {
+      font-size: 0.75em;
+      text-align: justify;
+      line-height: 1.5;
+      font-weight: 300;
+    }
+    &--link {
+      margin: 20px 0px;
+      color: rgba(0, 0, 0, 0.6);
+      font-size: 0.65em;
+      line-height: 2;
+      a {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+main {
+  min-height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  width: 100%;
+  background-color: $red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #f0f0f0;
+  .contents {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content {
+    width: 100%;
+    padding: 1.7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.08), transparent);
+    &__detail {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      h3 {
+        font-size: 1em;
+        display: inline;
+      }
+      span {
+        font-size: 0.7em;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@media (min-width: $breakpoint) {
+  .container {
+    flex-direction: row;
+    min-height: 100vh;
+  }
+  .header {
+    width: 32%;
+    position: fixed;
+    height: 100vh;
+  }
+  main {
+    width: 68%;
+    position: absolute;
+    right: 0;
+
+    overflow-y: scroll;
+  }
+}
