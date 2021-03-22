@@ -1,0 +1,23 @@
+.button {
+  font-size: $iconFontSize;
+  display: flex;
+  align-items: center;
+  height: 38px;
+  border: 1px solid $fontColor;
+  font-family: $iconFont;
+  text-transform: uppercase;
+  span {
+    margin: 0px 60px;
+    letter-spacing: $letterSpacing;
+    text-align: 25px;
+    margin-left: 25px;
+  }
+  .arrow {
+    width: 30px;
+    height: 100%;
+    border-left: 1px solid $fontColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

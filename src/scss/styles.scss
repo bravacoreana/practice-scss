@@ -1,37 +1,21 @@
 @import "reset";
 @import "_variables";
+@import "nav";
+@import "button";
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400&family=Newsreader:wght@200;300;400&display=swap");
 
-body {
-  background-color: #f0f0f0;
+// body {
+// background-color: #f0f0f0;
+// }
+
+* {
+  box-sizing: border-box;
 }
 
-nav {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+main {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  padding: 50px 40px;
-  & > ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    & > li {
-      list-style: none;
-      font-size: $iconFontSize;
-      letter-spacing: $letterSpacing;
-    }
-  }
-  .nav-mini:first-child {
-    display: none;
-  }
-  .logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 .boxes {
@@ -50,42 +34,64 @@ nav {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #f8dbbd;
-      .box--content-desc {
-        text-align: center;
-        font-size: $fontSize-L;
-        color: $fontColor;
-        font-family: "Newsreader", serif;
-        font-weight: 300;
-        word-spacing: 1.2;
-        margin-bottom: 20px;
-        max-width: 440px;
-        line-height: 1.2;
-      }
-      .button {
-        font-size: $iconFontSize;
-        display: flex;
-        align-items: center;
-        height: 38px;
-        border: 1px solid $fontColor;
-        font-family: $iconFont;
-        text-transform: uppercase;
-        span {
-          margin: 0px 60px;
-          letter-spacing: $letterSpacing;
-          text-align: 25px;
-          margin-left: 25px;
-        }
-        .arrow {
-          width: 30px;
-          height: 100%;
-          border-left: 1px solid $fontColor;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-      }
     }
+  }
+}
+
+.content-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__title {
+    font-family: $iconFont;
+    text-transform: uppercase;
+    font-size: $iconFontSize;
+    margin-bottom: 25px;
+  }
+  &__desc {
+    text-align: center;
+    font-size: $fontSize-L;
+    color: $fontColor;
+    font-family: "Newsreader", serif;
+    font-weight: 300;
+    word-spacing: 1.2;
+    margin-bottom: 20px;
+    max-width: 440px;
+    line-height: 1.2;
+  }
+}
+
+#boxes-first {
+  background-color: #f8dbbd;
+}
+#boxes-second {
+  background-color: #f3ede7;
+}
+
+.boxes-sm {
+  width: 90%;
+  margin: 100px 0px;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.items {
+  // width: 100%;
+  display: flex;
+  align-items: center;
+  .item {
+    max-width: 380px;
+    &--img {
+      width: 100%;
+    }
+    margin-bottom: 20px;
+  }
+  .item:not(:last-child) {
+    margin-right: 10px;
   }
 }
 
@@ -102,10 +108,26 @@ nav {
   .boxes {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    .box {
-      .box--content-desc {
-        font-size: $fontSize-S;
-      }
+    .box--right {
+      height: 30%;
+    }
+  }
+  .boxes-sm {
+    width: 100%;
+    margin: 50px 0px;
+  }
+  .content-title {
+    &__desc {
+      font-size: $fontSize-S;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .items {
+    flex-direction: column;
+    .item:not(:last-child) {
+      margin-right: 0;
     }
   }
 }
