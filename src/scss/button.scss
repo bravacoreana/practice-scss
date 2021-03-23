@@ -6,6 +6,8 @@
   border: 1px solid $fontColor;
   font-family: $iconFont;
   text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
   span {
     margin: 0px 60px;
     letter-spacing: $letterSpacing;
@@ -20,4 +22,14 @@
     justify-content: center;
     align-items: center;
   }
+  &:hover {
+    background-color: #000;
+    color: #f0f0f0;
+    border: 1px solid #f0f0f0;
+  }
+}
+
+.cart {
+  width: 80%;
+  margin-top: 20px;
 }

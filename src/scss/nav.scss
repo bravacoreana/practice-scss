@@ -1,14 +1,19 @@
 nav {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
+  // display: grid;
+  // grid-template-columns: 1fr 2fr 1fr;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   justify-content: center;
   font-family: "Lato", sans-serif;
   font-weight: 300;
   padding: 50px 40px;
+  transition: all 0.7s ease-in-out;
   & > ul {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     & > li {
       list-style: none;

@@ -20,9 +20,9 @@ main {
 
 .boxes {
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  // display: grid;
+  // grid-template-columns: repeat(2, 1fr);
+  // grid-template-rows: repeat(1, 1fr);
   .box {
     img {
       width: 100%;
@@ -83,10 +83,16 @@ main {
   // width: 100%;
   display: flex;
   align-items: center;
+
   .item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     max-width: 380px;
     &--img {
       width: 100%;
+      margin-bottom: 20px;
     }
     margin-bottom: 20px;
   }
@@ -106,6 +112,7 @@ main {
     }
   }
   .boxes {
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(1, 1fr);
     .box--right {
